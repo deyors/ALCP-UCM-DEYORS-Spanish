@@ -2,7 +2,7 @@ restart
 with(Domains):
 
 Euclides := proc(K, a, b)
-_local(r, i)
+local(r, i)
 r[0] := a
 r[1] := b
 i := 1
