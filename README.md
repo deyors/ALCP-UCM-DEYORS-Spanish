@@ -8,7 +8,7 @@ Basados en la lectura de dos libros:
 - A Computational Introduction to Number Theory and Algebra (Victor Shoup)
 
 Los algoritmos están en .txt para ver los códigos. Para poder aplicarlos hace
-falta abrir un archivo .mw y copiarlos línea por línea. 
+falta abrir un archivo .mw y añadirlos línea a línea. 
 
 Este repositorio ha sido creado con el afán de ampliar el conocimiento sobre 
 la asignatura y ver un ejemplo de las técnicas que se pueden aplicar para llegar 
