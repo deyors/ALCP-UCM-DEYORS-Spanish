@@ -19,12 +19,12 @@ copia literal de los códigos para aprobar la asignatura.
 
 Los algoritmos son los enumerados a continuación:
 
-**1. Algoritmo de Euclides para cualquier dominio euclideo. 
+**1. Algoritmo de Euclides para cualquier dominio euclideo. **
 
 Dado un dominio euclideo (D.E.) y dos elementos, realiza el Algoritmo de Euclides y
 devuelve el m.c.d. de esos elementos.
 
-**2. Algoritmo de Euclides extendido.
+**2. Algoritmo de Euclides extendido.**
 
 Dado un K D.E. y dos elementos a,b de K, realiza el Algoritmo de Euclides anterior para
 devolver el m.c.d. de esos elementos, digamos "d", y encuentra utilizando la 
@@ -32,7 +32,7 @@ Identidad de Bezout, los dos números x e y tales que:
 
 a*x + b*y = d
 
-3. Algoritmo para calcular el Teorema Chino del Resto.
+**3. Algoritmo para calcular el Teorema Chino del Resto.**
 
 Sea R un D.E. 
 Sean m[0], m[1], ... ,m[r-1] pertenecientes a R coprimos dos a dos
@@ -48,7 +48,7 @@ f ≡v[i] mod m[i], para 0 <= i < r
 El siguiente algoritmo toma los elementos m[i] y v[i] del enunciado 
 y devuelve el mencionado elemento f, utilizando como base la demostración de dicho teorema. 
 
-4. M.C.D. en un D.F.U.
+**4. M.C.D. en un D.F.U.**
 
 Sea K un Dominio de Factorización Única (D.F.U.), y sean f y g dos elementos de K, el 
 siguiente algoritmo calcula el Máximo Común Divisor (M.C.D.) entre esos dos elementos
