@@ -1,5 +1,7 @@
-TCR:=proc(modulos::list, v::list)
+restart
+with(Domains):
 
+TCR:=proc(modulos::list, v::list)
 local r, m, cociente, resultado, c, s, i;
 
 r := nops(modulos) + 1;
