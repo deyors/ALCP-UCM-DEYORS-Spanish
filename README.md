@@ -27,6 +27,7 @@ devuelve el m.c.d. de esos elementos.
 Dado un K D.E. y dos elementos a,b de K, realiza el Algoritmo de Euclides anterior para
 devolver el m.c.d. de esos elementos, digamos "d", y encuentra utilizando la 
 Identidad de Bezout, los dos números x e y tales que:
+
 a*x + b*y = d
 
 3. Algoritmo para calcular el Teorema Chino del Resto.
@@ -44,5 +45,11 @@ f ≡v[i] mod m[i], para 0 <= i < r
 
 El siguiente algoritmo toma los elementos m[i] y v[i] del enunciado 
 y devuelve el mencionado elemento f, utilizando como base la demostración de dicho teorema. 
+
+4. M.C.D. en un D.F.U.
+
+Sea K un Dominio de Factorización Única (D.F.U.), y sean f y g dos elementos de K, el 
+siguiente algoritmo calcula el Máximo Común Divisor (M.C.D.) entre esos dos elementos
+(normalizado). 
 
 
