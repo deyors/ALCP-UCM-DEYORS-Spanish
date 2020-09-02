@@ -1,0 +1,31 @@
+TCR:=proc(modulos::list, v::list)
+
+local r, m, cociente, resultado, c, s, i;
+
+r := nops(modulos) + 1;
+m := modulos[1];
+
+for i from 2 to r - 1 do
+    m := m*modulos[i];
+od:
+
+resultado := 0;
+
+for i from 1 to r-1 do
+    cociente := m/modulos[i];
+    s := EuclidesExt(Z, cociente, modulos[i])[2];
+    c := v[i]*s mod modulos[i];
+    resultado := c*cociente + resultado;
+
+od:
+
+return(resultado mod m); 
+end: 
+
+#EJEMPLOS:
+
+TCR([11], [2]); #Resultado 2
+
+TCR([5, 9, 7], [3, 4, 2]); #Resultado 58
+
+TCR([13,15,17,20],[2,8,13,2]); #Resultado 48310
