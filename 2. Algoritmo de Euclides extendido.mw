@@ -1,7 +1,6 @@
 restart;
 with(Domains);
 
-
 EuclidesExt:= proc(K, a,b)
 local r, s, t, i, q, qr, qs, qt, S, T, mcd;
 
