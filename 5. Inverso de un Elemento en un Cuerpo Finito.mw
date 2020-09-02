@@ -1,0 +1,40 @@
+restart
+with(Domains):
+
+InversoFinito:=proc(K,e)
+local inverso, oc, r, s, t, K1, K2;
+oc:=K[Size]; #orden del cuerpo
+if isprime(oc) then
+    (r, s, t) := EuclidesExt(Z, e, oc);
+    inverso := K[Input](s);
+else:
+    K1 := K[Representation];
+    K2 := K[Extension];
+    if e = K[1] then
+        inverso := e;
+    fi:
+    (r,s,t):=EuclidesExt(K1,e,K2);     
+    if r=K1[1] then
+        inverso := s;
+    else:
+        inverso := 0;
+    fi:
+fi:
+return(inverso)
+end:
+
+#EJEMPLOS:
+
+p := 13;
+Zp := Zmod(p);
+InversoFinito(Zp, 5); #Resultado 8
+
+p := 2003;
+Zp := Zmod(p);
+InversoFinito(Zp, 5); #Resultado 1202
+
+K := DUP(GF(3, 1), x);
+f := K[Input](x^3 - 2*x^2 - 1);
+Kf := SAE(K, f);
+g := Kf[Input](2*x^2 + x);
+InversoFinito(Kf, g); #Resultado 2*x^2 + 2
