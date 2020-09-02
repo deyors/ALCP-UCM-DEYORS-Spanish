@@ -19,6 +19,11 @@ Los algoritmos son los enumerados a continuación:
 
 1. Algoritmo de Euclides para cualquier dominio euclideo. 
 
-Dado un dominio euclideo y dos elementos, realiza el Algoritmo de Euclides y
+Dado un dominio euclideo (D.E.) y dos elementos, realiza el Algoritmo de Euclides y
 devuelve el m.c.d. de esos elementos.
 
+2. Algoritmo de Euclides extendido.
+
+Dado un K D.E. y dos elementos a,b de K, realiza el Algoritmo de Euclides anterior para
+devolver el m.c.d. de esos elementos, digamos "d", y encuentra utilizando la 
+Identidad de Bezout, los dos números x e y tales que a*x + b*y = d
