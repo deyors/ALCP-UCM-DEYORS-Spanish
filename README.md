@@ -26,4 +26,23 @@ devuelve el m.c.d. de esos elementos.
 
 Dado un K D.E. y dos elementos a,b de K, realiza el Algoritmo de Euclides anterior para
 devolver el m.c.d. de esos elementos, digamos "d", y encuentra utilizando la 
-Identidad de Bezout, los dos números x e y tales que a*x + b*y = d
+Identidad de Bezout, los dos números x e y tales que:
+a*x + b*y = d
+
+3. Algoritmo para calcular el Teorema Chino del Resto.
+
+Sea R un D.E. 
+Sean m[0], m[1], ... ,m[r-1] pertenecientes a R coprimos dos a dos
+Sean v[0], v[1], ... , v[r-1] pertenecientes a R
+Sea m = m[0]*m[1]*...*m[r-1]
+
+Entonces tenemos que m = mcm(m[0],m[1],... m[r-1])
+
+Este teorma dice que existe un elemento f perteneciente a R tal que:
+
+f ≡v[i] mod m[i], para 0 <= i < r
+
+El siguiente algoritmo toma los elementos m[i] y v[i] del enunciado 
+y devuelve el mencionado elemento f, utilizando como base la demostración de dicho teorema. 
+
+
