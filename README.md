@@ -54,4 +54,6 @@ Sea K un Dominio de Factorización Única (D.F.U.), y sean f y g dos elementos d
 siguiente algoritmo calcula el Máximo Común Divisor (M.C.D.) entre esos dos elementos
 (normalizado). 
 
+**5. Inverso de un elemento en un cuerpo finito.**
 
+Sea K un cuerpo finito, "e" perteneciente a K, el algoritmo devuelve el inverso de "e" en K.
