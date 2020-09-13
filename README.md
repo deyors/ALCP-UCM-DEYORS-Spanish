@@ -1,6 +1,6 @@
 # ALCP-UCM-TheYorsh
 Prácticas para el programa "Maple" con los algoritmos de la evaluación
-de la asignatura "Álgebra Computacional" de la UCM, curso 2020-2021.
+de la asignatura "Álgebra Computacional" de la UCM, curso 2019-2020.
 
 Basados en la lectura de dos libros:
 
