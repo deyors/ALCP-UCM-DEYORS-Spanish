@@ -19,27 +19,27 @@ copia literal de los códigos para aprobar la asignatura.
 
 Para ejecutar correctamente los códigos, los ejemplos deberán ir en otro entorno 
 de ejecución, es decir, esto no sería correcto:
-> InversoFinito:=proc(K,e)
-  local inverso, oc, r, s, t, K1, K2;
-  oc:=K[Size];
-  #termina la función..
-  p := 13;
-  Zp := Zmod(p);
-  InversoFinito(Zp, 5);
-  #Lo de arriba es el ejemplo de la función
+"> InversoFinito:=proc(K,e)
+   local inverso, oc, r, s, t, K1, K2;
+   oc:=K[Size];
+   #termina la función..
+   p := 13;
+   Zp := Zmod(p);
+   InversoFinito(Zp, 5);
+   #Lo de arriba es el ejemplo de la función
 
 Sin embargo, esto sí sería correcto:
 
-> InversoFinito:=proc(K,e)
-  local inverso, oc, r, s, t, K1, K2;
-  oc:=K[Size];
-  #termina la función..
-  #acabo esta ejecución y creo otra:
+"> InversoFinito:=proc(K,e)
+   local inverso, oc, r, s, t, K1, K2;
+   oc:=K[Size];
+   #termina la función..
+   #acabo esta ejecución y creo otra:
 
-> p := 13;
-  Zp := Zmod(p);
-  InversoFinito(Zp, 5);
-  #Lo de arriba es el ejemplo de la función
+"> p := 13;
+   Zp := Zmod(p);
+   InversoFinito(Zp, 5);
+   #Lo de arriba es el ejemplo de la función
 
 Los algoritmos son los enumerados a continuación:
 
