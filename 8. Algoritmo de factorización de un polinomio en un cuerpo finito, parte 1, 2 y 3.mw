@@ -1,6 +1,5 @@
 #FUNCIONES AUXILIARES:
 
-
 PolinomioAFx := proc(f,p,pol)
 # Convierte un polinomio f a un polinomo con coeficientes en F.
 # Si |F| = q = p, poner pol = y el polinomio F se convertira en un polinomio con coeficientes en Zp.
