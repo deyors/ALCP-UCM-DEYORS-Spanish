@@ -98,3 +98,10 @@ siguiente algoritmo calcula el Máximo Común Divisor (M.C.D.) entre esos dos el
 **5. Inverso de un elemento en un cuerpo finito.**
 
 Sea K un cuerpo finito, "e" perteneciente a K, el algoritmo devuelve el inverso de "e" en K.
+
+**6. Test de Irreducibilidad de un polinomio en Fq[x]:**
+
+Sea un polinomio f en un cuerpo de dimensión q^k, devuelve "Reducible" si el polinomio es 
+reducible en dicho cuerpo e "Irreducible" en caso contrario. 
+
+
