@@ -153,7 +153,7 @@ w con el que podamos expresar F como Zp/(pol), este algoritmo nos da una lista d
 los irreducibles de un polinomio f si sabemos que puede descomponerse en k 
 irreducibles.
 
-** 9. Algoritmo de Berlekamp en un cuerpo finito.**
+**9. Algoritmo de Berlekamp en un cuerpo finito.**
 
 La estructura del algoritmo está formada por: 
 
@@ -177,3 +177,13 @@ Berlekamp v(1), ... , v(n).
 
 Dado un polinomio f libre de cuadrados y p el cardinal de Zp, este algoritmo factoriza
 completamente f en factores contenidos en Zp[x].
+
+**10. Algoritmo de factorización en Z[x] o de Hensel:**
+
+Dado un polinomio f, p el cardinal de Zp y dos polinomios g y h que respeten las condiciones
+de las proposiciones de Hensel, el algoritmo devuelve una factorización de f.
+
+**11. Algoritmo de primalidad AKS:**
+
+Dado un número entero, resuelve si ese número es primo en Z utilizando el algoritmo AKS.
+
