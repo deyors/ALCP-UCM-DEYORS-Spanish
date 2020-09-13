@@ -19,9 +19,11 @@ copia literal de los códigos para aprobar la asignatura.
 
 Para ejecutar correctamente los códigos, los ejemplos deberán ir en otro entorno 
 de ejecución, es decir, esto no sería correcto:
+
 "> InversoFinito:=proc(K,e)
 
    local inverso, oc, r, s, t, K1, K2;
+   
    oc:=K[Size];
    
    #termina la función..
