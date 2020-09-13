@@ -104,4 +104,9 @@ Sea K un cuerpo finito, "e" perteneciente a K, el algoritmo devuelve el inverso 
 Sea un polinomio f en un cuerpo de dimensión q^k, devuelve "Reducible" si el polinomio es 
 reducible en dicho cuerpo e "Irreducible" en caso contrario. 
 
+**7. Logaritmo discreto en cuerpos Fq[x]/f(x):**
+
+Dado un polinomio f(x), un cuerpo de dimensión "q primo" y dos números "a" y "b", calcula 
+log_b(a).
+
 
