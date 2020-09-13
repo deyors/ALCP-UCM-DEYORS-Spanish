@@ -153,3 +153,27 @@ w con el que podamos expresar F como Zp/(pol), este algoritmo nos da una lista d
 los irreducibles de un polinomio f si sabemos que puede descomponerse en k 
 irreducibles.
 
+** 9. Algoritmo de Berlekamp en un cuerpo finito.**
+
+La estructura del algoritmo está formada por: 
+
+- 0. Funciones auxiliares: 
+
+Dada una matriz Q, la función insertRow insterta el vector r los primeros n elementos
+en la fila i.
+
+Dado un polinomio f y p el cardinal de Zp para el cual se quiera factorizar el polinomio
+aplicando este algoritmo, la función matrixQ proporciona la matriz de Berlekamp de
+ese polinomio.
+
+Dado un número "a", la función inverseModulo devuelve su inverso módulo "b".
+
+Dada una matriz M de dimensión n, la función permuteRow permuta la fila i por la fila j.
+
+Dada una matriz M de dimensión n y p el cardinal de Zp, calcula los vectores de 
+Berlekamp v(1), ... , v(n).
+
+- 1. Algoritmo final:
+
+Dado un polinomio f libre de cuadrados y p el cardinal de Zp, este algoritmo factoriza
+completamente f en factores contenidos en Zp[x].
