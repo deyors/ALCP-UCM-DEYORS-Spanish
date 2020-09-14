@@ -24,16 +24,16 @@ end:
 
 #EJEMPLOS:
 
-p := 13;
-Zp := Zmod(p);
+p := 13:
+Zp := Zmod(p):
 InversoFinito(Zp, 5); #Resultado 8
 
-p := 2003;
-Zp := Zmod(p);
+p := 2003:
+Zp := Zmod(p):
 InversoFinito(Zp, 5); #Resultado 1202
 
-K := DUP(GF(3, 1), x);
-f := K[Input](x^3 - 2*x^2 - 1);
-Kf := SAE(K, f);
-g := Kf[Input](2*x^2 + x);
+K := DUP(GF(3, 1), x):
+f := K[Input](x^3 - 2*x^2 - 1):
+Kf := SAE(K, f):
+g := Kf[Input](2*x^2 + x):
 InversoFinito(Kf, g); #Resultado 2*x^2 + 2
