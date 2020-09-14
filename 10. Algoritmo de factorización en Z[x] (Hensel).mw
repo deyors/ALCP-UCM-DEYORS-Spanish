@@ -1,3 +1,5 @@
+#FUNCIÓN PRINCIPAL:
+
 FactorizacionZ:=proc(f,g,h,p)
 local q, c, s, t, t2, g1, h1, m, deg_h, deg_f, deg_g, sigma, alfa, delta, gamma, r, e, Zp, cero_div, coef;
 deg_f := degree(f);
