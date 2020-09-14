@@ -5,17 +5,17 @@ PolinomioAFx := proc(f,p,pol)
 # Si |F| = q = p, poner pol = y el polinomio F se convertira en un polinomio con coeficientes en Zp.
 local normalizado, result, j, coeficiente; 
 if pol = 1 then
-    result := 0
+    result := 0;
     for j from 0 to degree(f,x) do
         coeficiente := coeff(f,x,j) mod p;
         result :=result + coeficiente*x^(j);
     od;
-    normalizado := normal(result)
+    normalizado := normal(result);
 else
     result := 0;
     for j from 0 to degree(f, x) do
-    coeficiente := rem(coeff(f, x, j), pol, alpha) mod p;
-    result := result + coeficiente*x^j;
+        coeficiente := rem(coeff(f, x, j), pol, alpha) mod p;
+        result := result + coeficiente*x^j;
     od;
     normalizado := normal(result);
 fi:
@@ -33,10 +33,15 @@ n[1] := degree(g, x);
 
 i:=1;  
 while r[i]<>0 do
-    coef := PolinomioAFx(lcoeff(r[i], x)^(n[i - 1] - n[i] + 1), p, pol)
-    r[i + 1] := primpart(rem(PolinomioAFx(coef*r[i - 1], p, pol), r[i], x), x)
-    r[i + 1] := primpart(PolinomioAFx(r[i + 1], p, pol), x)
-
+    coef := PolinomioAFx(lcoeff(r[i], x)^(n[i - 1] - n[i] + 1), p, pol);
+    r[i + 1] := primpart(rem(PolinomioAFx(coef*r[i - 1], p, pol), r[i], x), x);
+    r[i + 1] := primpart(PolinomioAFx(r[i + 1], p, pol), x);
+    n[i + 1] := degree(r[i + 1], x);
+    i := i + 1;
+od:
+normalizado := normal(r[i - 1]);
+return(normalizado)  
+end: 
 
 # 1. SFD (Square-free descomposition)
 
@@ -78,27 +83,27 @@ end:
 
 #EJEMPLOS SFD:
 
-p := 2;
-w := 2;
-pol := alpha^2 + alpha + 1;
-f := PolinomioAFx((x^2 + alpha)^2*(x + 1), p, pol);
+p := 2:
+w := 2:
+pol := alpha^2 + alpha + 1:
+f := PolinomioAFx((x^2 + alpha)^2*(x + 1), p, pol):
 SFD(f, p, w, pol) #Resultado: [[x + 1, 1], [x^2 + alpha, 2]]
 
-p := 3;
-w := 3;
-pol := alpha^3 + alpha^2 + alpha - 1;
-f := PolinomioAFx((x^2 + alpha)^2*(x - 2), p, pol);
+p := 3:
+w := 3:
+pol := alpha^3 + alpha^2 + alpha - 1:
+f := PolinomioAFx((x^2 + alpha)^2*(x - 2), p, pol):
 SFD(f, p, w, pol); #Resultado: [[x + 1, 1], [x^2 + alpha, 2]]
 
-p := 5;
-w := 1;
-pol := 1;
-f := PolinomioAFx((x^2 + 1)^3*x, p, pol);
+p := 5:
+w := 1:
+pol := 1:
+f := PolinomioAFx((x^2 + 1)^3*x, p, pol):
 SFD(f, p, w, pol); #Resultado: [[x, 1], [x^2 + 1, 3]]
 
-p := 7;
-w := 1;
-pol := 1;
+p := 7:
+w := 1:
+pol := 1:
 SFD(x^3 + 2*x^2 + x, p, w, pol); #Resultado: [[x, 1], [x + 1, 2]]
 
 
@@ -126,22 +131,22 @@ end:
 
 #EJEMPLOS:
 
-p := 5;
-w := 1;
-pol := 1;
-f := PolinomioAFx((x^2 + x + 1)*(x - 5), p, pol);
+p := 5:
+w := 1:
+pol := 1:
+f := PolinomioAFx((x^2 + x + 1)*(x - 5), p, pol):
 DDF(f, p, w, pol); #RESULTADO: [[x, 1], [x^2 + x + 1, 2]]
 
-p := 2;
-w := 2;
-pol := alpha^2 + alpha + 1;
-f := PolinomioAFx((x^2 + alpha + x)*(x^3 + 1), p, pol);
+p := 2:
+w := 2:
+pol := alpha^2 + alpha + 1:
+f := PolinomioAFx((x^2 + alpha + x)*(x^3 + 1), p, pol):
 DDF(f, p, w, pol); #RESULTADO: [[x^3 + 1, 1], [x^2 + alpha + x, 2]]
 
-p := 3;
-w := 3;
-pol := alpha^3 + alpha^2 + alpha - 1;
-f := PolinomioAFx(x^4 + 2*x^3 + alpha*x + alpha + 2*x, p, pol);
+p := 3:
+w := 3:
+pol := alpha^3 + alpha^2 + alpha - 1:
+f := PolinomioAFx(x^4 + 2*x^3 + alpha*x + alpha + 2*x, p, pol):
 DDF(f, p, w, pol); #RESULTADO: [[x + 1, 1], [x^3 + x^2 + alpha + 2*x, 3]]
 
 
@@ -150,7 +155,7 @@ DDF(f, p, w, pol); #RESULTADO: [[x + 1, 1], [x^3 + x^2 + alpha + 2*x, 3]]
 Mk:=proc(polinomio,w,k,p,pol)
 local M, representacion;
 M := sum(polinomio^(p^j), j = 0 .. (k*w - 1));
-representacion := PolinomioAFx(M,p,pol)
+representacion := PolinomioAFx(M,p,pol);
 return(representacion)
 end:
 
@@ -160,39 +165,40 @@ l := degree(f);
 r := l/k;
 H := {f};
 while nops(H)<r do
-    A:={};      
+    A:={};
     for h in H do
         a := randpoly(x);
         a := rem(a, h, x);
         a := PolinomioAFx(a, p, pol);
         d := PolinomioAFx(MCDFinito(Mk(a, w, k, p, pol), h, p, pol), p, pol);
         if (d=1 or d=h) then
-            A := A union {h}
+            A := A union {h};
         else
             t := PolinomioAFx(quo(h, d, x), p, pol);
             A := A union {d, t};
-         fi:
+        fi:
     od:
     H:=A;
 od:
 return(H)
+end:
 
 #EJEMPLOS:
 
-p := 5;
-w := 1;
-pol := 1;
-f := PolinomioAFx(x^3 + x^2 + x, p, pol);
+p := 5:
+w := 1:
+pol := 1:
+f := PolinomioAFx(x^3 + x^2 + x, p, pol):
 EDF(f, p, w, pol, 2); #Resultado: {x, x^2 + x + 1}
 
-p := 2;
-w := 2;
-pol := alpha^2 + alpha + 1;
-f := PolinomioAFx((x + 1)*(x + alpha), p, pol);
+p := 2:
+w := 2:
+pol := alpha^2 + alpha + 1:
+f := PolinomioAFx((x + 1)*(x + alpha), p, pol):
 EDF(f, p, w, pol, 1); #Resultado: {x + 1, x + alpha}
 
-p := 2;
-w := 3;
-pol := alpha^3 + alpha^2 + alpha - 1;
-f := PolinomioAFx(x^3 + alpha*x + x^2 + alpha + x + 1, p, pol);
+p := 2:
+w := 3:
+pol := alpha^3 + alpha^2 + alpha - 1:
+f := PolinomioAFx(x^3 + alpha*x + x^2 + alpha + x + 1, p, pol):
 EDF(f, p, w, pol, 2); #Resultado {x + 1, x^2 + alpha + 1}
