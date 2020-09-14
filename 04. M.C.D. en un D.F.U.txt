@@ -24,17 +24,17 @@ end:
 
 #EJEMPLOS
 
-Qx := DUP(Q, x);
+Qx := DUP(Q, x):
 f := Qx[Input](x^5 + 2*x^3 + x);
 g := Qx[Input](x^4 - 1);
 mcdDFU(Qx, f, g); #Resultado x^2 + 1
 
-Qx := DUP(Q, x);
+Qx := DUP(Q, x):
 f := Qx[Input](18*x^3 - 42*x^2 + 30*x - 6);
 g := Qx[Input](-12*x^2 + 10*x - 2);
 mcdDFU(Qx, f, g); #Resultado -1/3 + x
 
-Qx := DUP(Q, x);
+Qx := DUP(Q, x):
 f := Qx[Input](x^8 + 2*x^7 + 4*x^6 - 2*x^5 - 3*x^4 + 4*x^3 + 9*x^2 - 2*x - 5);
 g := Qx[Input](5*x^5 - 2*x^4 - 13*x^3 - 11*x^2 + 7*x + 6);
 mcdDFU(Qx, f, g); #Resultado x^3 + x^2 - 1
