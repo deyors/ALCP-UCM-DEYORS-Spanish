@@ -1,15 +1,15 @@
 with(Domains):
 
 Euclides := proc(K, a, b)
-local(r, i)
-r[0] := a
-r[1] := b
-i := 1
+local r, i;
+r[0] := a;
+r[1] := b;
+i := 1;
 while (r[i]<> K[Input](0)) do
-    r[i + 1] := K[Rem](r[i - 1], r[i])
-    i := i + 1
+    r[i + 1] := K[Rem](r[i - 1], r[i]); 
+    i := i + 1;
 od:
-return r[i - 1]
+return(r[i - 1])
 end:
 
 
