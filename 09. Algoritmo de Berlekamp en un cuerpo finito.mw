@@ -1,4 +1,4 @@
-#FUNCIONES AUXILIARES: JE
+#FUNCIONES AUXILIARES:
 
 insertRow:=proc(Q,i,r,n)  #Dada una matriz Q insterta la el vector r en la fila i, cada uno con n elementos
 local j;  
