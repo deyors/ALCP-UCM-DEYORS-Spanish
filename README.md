@@ -18,8 +18,9 @@ la asignatura y ver un ejemplo de las técnicas que se pueden aplicar para llega
 a los resultados de los libros. No se pretende de ninguna manera promover la 
 copia literal de los códigos para aprobar la asignatura.
 
-Para ejecutar correctamente los códigos, los ejemplos deberán ir en otro entorno 
-de ejecución, es decir, esto no sería correcto:
+Para ejecutar correctamente los códigos, tanto los ejemplos como cada función
+por separado deberán ir en otro entorno de ejecución, es decir, esto no sería 
+correcto:
 
 *"> InversoFinito:=proc(K,e)*
 
@@ -33,7 +34,7 @@ de ejecución, es decir, esto no sería correcto:
    
    *Zp := Zmod(p);*
    
-   *InversoFinito(Zp, 5);*
+   *InversoFinito(Zp, 5);* #ESTO TIENE QUE IR FUERA DE LA EJECUCIÓN
    
    *#Lo de arriba es el ejemplo de la función*
    
