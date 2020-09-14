@@ -8,7 +8,7 @@ od;
 end:
 
 matrixQ:=proc(f,p) #f es el polinomio a factorizar y p el índice de Zp
-local(n, Qm, A, i, j, r, m, R, l);
+local n, Qm, A, i, j, r, m, R, l;
 n := degree(f);
 Qm := array(1 .. n, 1 .. n);
 A := array(1 .. n + 1);
@@ -22,9 +22,9 @@ for i from 2 to n do
 od;
 insertRow(Qm, 1, r, n);
 for m from 1 to (n-1)*p do
-    R := r[n]
-    l := array(1 .. n)
-    l[1] := mods(-R*A[1], p)
+    R := r[n];
+    l := array(1 .. n);
+    l[1] := mods(-R*A[1], p);
     for i from 2 to n do
         l[i] := mods(r[i - 1] - mods(R*A[i], p), p);
     od;
@@ -32,14 +32,14 @@ for m from 1 to (n-1)*p do
         r[j] := l[j];
     od;     
         if irem(m,p)=0 then
-            insertRow(Qm, iquo(m, p) + 1, r, n)
+            insertRow(Qm, iquo(m, p) + 1, r, n);
         fi:
 od;
 RETURN(Qm);  
 end:
 
 inverseModulo:=proc(a,b) #Dado un numero a te devuelve su inverso modulo b
-local c, c1, c2, d, d1, d2, r1, r2, q, r, aux
+local c, c1, c2, d, d1, d2, r1, r2, q, r, aux;
 c := max(abs(a), abs(b));
 d := min(abs(a), abs(b));
 c1 := 1;
