@@ -17,7 +17,7 @@ end:
 
 #EN ℤ:
 
-Euclides(Z, 150, 39)  #Resultado 3
+Euclides(Z, 150, 39)  #Resultado: 3
 
 #EN ℤp[x]:
 
@@ -26,11 +26,11 @@ Zp := Zmod(p):
 Zpx := DUP(Zp, x):
 f := Zpx[Input](15*x^5 + 2*x^3 + x):
 g := Zpx[Input](3*x^4 - 1):
-Euclides(Zpx, f, g); #Resultado 4*x^2 + 12
+Euclides(Zpx, f, g); #Resultado: 4*x^2 + 12
 
 #EN ℚ[x]
 
 Qx := DUP(Q, x):
 f := Qx[Input](x^2 + 2*x + 1):
 g := Qx[Input](x + 1):
-Euclides(Qx, f, g); #Resultado x + 1
+Euclides(Qx, f, g); #Resultado: x + 1
