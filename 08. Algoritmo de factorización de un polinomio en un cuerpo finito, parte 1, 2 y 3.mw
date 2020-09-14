@@ -1,4 +1,4 @@
-#FUNCIONES AUXILIARES EJE
+#FUNCIONES AUXILIARES
 
 PolinomioAFx := proc(f,p,pol)
 # Convierte un polinomio f a un polinomo con coeficientes en F.
