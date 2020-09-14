@@ -11,7 +11,7 @@ s[1] := K[Input](0);
 t[0] := K[Input](0);
 t[1] := K[Input](1);
 
-i := 1
+i := 1;
 
 while (r[i] <>K[Input](0)) do
     q[i] := K[Quo](r[i - 1], r[i]); #cociente de la división
@@ -39,20 +39,20 @@ EuclidesExt(Z, 135, 26) #Resultado 1, -5, 26
 
 #En Zp[x]:
 
-p := 13;
-Zpx := DUP(Zmod(p), x);
+p := 13:
+Zpx := DUP(Zmod(p), x):
 h := Zpx[Input](15*x^5 + 2*x^3 + x);
 l := Zpx[Input](3*x^4 - 1);
 EuclidesExt(Zpx, h, l); #Resultado 4*x^2 + 12, 5*x, x^2 + 1
 
-p := 3;
-Zpx := DUP(Zmod(p), x);
+p := 3:
+Zpx := DUP(Zmod(p), x):
 h := Zpx[Input](x^2 + 2);
 l := Zpx[Input](x + 1);
 EuclidesExt(Zpx, h, l); #Resultado x + 1, 0, 1
 
-p := 3;
-Zpx := DUP(Zmod(p), x);
+p := 3:
+Zpx := DUP(Zmod(p), x):
 h := Zpx[Input](x^2 - 3*x - 10);
 l := Zpx[Input](x^2 - x - 6);
 EuclidesExt(Zpx, h, l); #Resultado 2 + x, 1, 2
