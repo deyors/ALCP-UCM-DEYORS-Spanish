@@ -1,5 +1,7 @@
+with(Domains):
+
 Test:=proc(f,q,k)
-local(deg_f, p, R, h, i, g, M, F);
+local deg_f, p, R, h, i, g, M, F;
 
 p := q^k;
 deg_f := degree(f);
