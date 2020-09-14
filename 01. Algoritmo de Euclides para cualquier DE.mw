@@ -21,7 +21,7 @@ Euclides(Z, 150, 39)  #Resultado 3
 
 #EN ℤp[x]:
 
-p := 13;
+p := 13:
 Zp := Zmod(p):
 Zpx := DUP(Zp, x):
 f := Zpx[Input](15*x^5 + 2*x^3 + x):
