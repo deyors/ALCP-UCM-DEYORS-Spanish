@@ -59,12 +59,12 @@ EuclidesExt(Zpx, h, l); #Resultado 2 + x, 1, 2
 
 #En Q[x]:
 
-Qx := DUP(Q, x);
+Qx := DUP(Q, x):
 f := Qx[Input](x^2 + 2*x + 1);
 g := Qx[Input](x + 1);
 EuclidesExt(Qx, f, g); #Resultado x + 1, 0, 1
 
-Qx := DUP(Q, x);
+Qx := DUP(Q, x):
 f := Qx[Input](x^2 - 2*x - 3);
 g := Qx[Input](x^2 - 4*x + 3);
 EuclidesExt(Qx, f, g); #Resultado -6 + 2*x, 1, -1
