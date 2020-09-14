@@ -7,6 +7,7 @@ while B <> a do
     B := B mod q;
     i := i + 1;
 od:
+PUTA
 return(i)
 end:
 
