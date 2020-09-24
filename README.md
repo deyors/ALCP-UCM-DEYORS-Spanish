@@ -1,4 +1,4 @@
-# ALCP-UCM-TheYorsh
+# ALCP-UCM-TheYorsh (Español)
 Prácticas para el programa "Maple" con los algoritmos de la evaluación
 de la asignatura "Álgebra Computacional" de la Universidad Complutense
 de Madrid, curso 2019-2020.
