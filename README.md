@@ -19,7 +19,7 @@ a los resultados de los libros. No se pretende de ninguna manera promover la
 copia literal de los códigos para aprobar la asignatura.
 
 Este contenido es 100% gratuito, pero puedes ayudarme a seguir subiendo 
-material donando lo que creas conveniente a mi Paypal: paypal.me/theyorsh
+material donando lo que creas conveniente a mi Paypal: paypal.me/deyors
 
 Si deseas descargarte los códigos, es aconsejable abrirlos con Notepad++
 para ver bien las separaciones entre líneas, y luego pasarlos en el Maple. 
